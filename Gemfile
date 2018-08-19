@@ -49,6 +49,8 @@ group :development do
   gem 'rspec-rails', '~> 3.7'
   # Code style checking for RSpec files
   gem 'rubocop-rspec'
+  # Library for stubbing and setting expectations on HTTP requests in Ruby
+  gem 'webmock'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
