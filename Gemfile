@@ -49,6 +49,8 @@ group :development do
   gem 'rspec-rails', '~> 3.7'
   # Code style checking for RSpec files
   gem 'rubocop-rspec'
+  # SimpleCov is a code coverage analysis tool for Ruby
+  gem 'simplecov', require: false
   # Library for stubbing and setting expectations on HTTP requests in Ruby
   gem 'webmock'
 end
