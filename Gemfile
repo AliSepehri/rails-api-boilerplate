@@ -51,6 +51,8 @@ group :development do
   gem 'rubocop-rspec'
   # SimpleCov is a code coverage analysis tool for Ruby
   gem 'simplecov', require: false
+  # Shoulda Matchers provides RSpec- and Minitest-compatible one-liners that test common Rails functionality
+  gem 'shoulda-matchers', '~> 3.1'
   # Library for stubbing and setting expectations on HTTP requests in Ruby
   gem 'webmock'
 end
