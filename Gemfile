@@ -41,6 +41,9 @@ group :development do
 
   # A Ruby static code analyzer and formatter
   gem 'rubocop', '~> 0.58.2', require: false
+  # Factory Bot Rails is a fixtures replacement with a straightforward definition syntax
+  gem 'factory_bot_rails'
+  # Faker is a library for generating fake data such as names, addresses, and phone numbers
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
