@@ -41,6 +41,20 @@ group :development do
 
   # A Ruby static code analyzer and formatter
   gem 'rubocop', '~> 0.58.2', require: false
+  # Factory Bot Rails is a fixtures replacement with a straightforward definition syntax
+  gem 'factory_bot_rails'
+  # Faker is a library for generating fake data such as names, addresses, and phone numbers
+  gem 'faker'
+  # Rspec Rails is a testing framework for Rails
+  gem 'rspec-rails', '~> 3.7'
+  # Code style checking for RSpec files
+  gem 'rubocop-rspec'
+  # SimpleCov is a code coverage analysis tool for Ruby
+  gem 'simplecov', require: false
+  # Shoulda Matchers provides RSpec- and Minitest-compatible one-liners that test common Rails functionality
+  gem 'shoulda-matchers', '~> 3.1'
+  # Library for stubbing and setting expectations on HTTP requests in Ruby
+  gem 'webmock'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
