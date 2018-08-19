@@ -44,6 +44,7 @@ group :development do
   # Factory Bot Rails is a fixtures replacement with a straightforward definition syntax
   gem 'factory_bot_rails'
   # Faker is a library for generating fake data such as names, addresses, and phone numbers
+  gem 'faker'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
