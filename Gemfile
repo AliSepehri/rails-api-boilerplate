@@ -45,6 +45,10 @@ group :development do
   gem 'factory_bot_rails'
   # Faker is a library for generating fake data such as names, addresses, and phone numbers
   gem 'faker'
+  # Rspec Rails is a testing framework for Rails
+  gem 'rspec-rails', '~> 3.7'
+  # Code style checking for RSpec files
+  gem 'rubocop-rspec'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
