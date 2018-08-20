@@ -38,7 +38,11 @@ group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
+  # help to kill N+1 queries and unused eager loading
+  gem 'bullet'
+end
 
+group :test do
   # A Ruby static code analyzer and formatter
   gem 'rubocop', '~> 0.58.2', require: false
   # Factory Bot Rails is a fixtures replacement with a straightforward definition syntax
