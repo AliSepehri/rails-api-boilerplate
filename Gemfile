@@ -35,7 +35,7 @@ group :development, :test do
   # An IRB alternative and runtime developer console
   gem 'pry'
   # Avoid repeating yourself in rails console
-    gem "pry-rails"
+  gem 'pry-rails'
 end
 
 group :development do
