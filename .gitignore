@@ -26,3 +26,8 @@
 coverage
 # Ignore application configuration
 /config/application.yml
+
+# Docker
+/docker/docker-compose.yml
+/docker/docker.app.env
+/docker/docker.postgres.env

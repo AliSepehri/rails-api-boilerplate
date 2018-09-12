@@ -1,0 +1,25 @@
+version: "3"
+services:
+  postgres:
+    image: postgres:10.5
+    container_name: postgres
+    env_file:
+      - docker.postgres.env
+    volumes:
+      - ./postgres:/var/lib/postgresql/data
+    network_mode: backend
+  boilerplate_app:
+    image: boilerplate-app:latest
+    build: ../
+    container_name: boilerplate-app
+    command: app
+    env_file:
+      - docker.app.env
+    volumes:
+      - ./public/uploads:/var/www/boilerplate-app/public/uploads
+      - ./log:/var/www/boilerplate-app/log
+    ports:
+      - "127.0.0.1:3000:9292"
+    external_links:
+      - postgres:postgres
+    network_mode: backend

@@ -1,24 +1,28 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
 
-Things you may want to cover:
+## Docker
+1. Create `backend` network:
+    ```
+    docker network create backend
+    ```
 
-* Ruby version
+1. Go to `docker` folder and copy required files to the names which are ignored by `.gitignore` file in order to customize them:
+    ```
+    cd docker
+    cp docker-compose.sample.yml docker-compose.yml
+    cp docker-compose.sample.env docker-compose.env
+    cp docker.postgres.sample.env docker.postgres.env
+    ```
 
-* System dependencies
+1. Build image and run a container:
+    ```
+    docker-compose build
+    docker-compose up -d
+    ```
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+4. Check it out:
+    ```
+    curl localhost:3000
+    # => {"app_name":"rails-api-boilerplate"}
+    ```
