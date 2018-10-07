@@ -38,18 +38,6 @@ group :development, :test do
   gem 'pry'
   # Avoid repeating yourself in rails console
   gem 'pry-rails'
-end
-
-group :development do
-  gem 'listen', '>= 3.0.5', '< 3.2'
-  # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
-  gem 'spring'
-  gem 'spring-watcher-listen', '~> 2.0.0'
-  # help to kill N+1 queries and unused eager loading
-  gem 'bullet'
-end
-
-group :test do
   # A Ruby static code analyzer and formatter
   gem 'rubocop', '~> 0.58.2', require: false
   # Factory Bot Rails is a fixtures replacement with a straightforward definition syntax
@@ -66,6 +54,15 @@ group :test do
   gem 'shoulda-matchers', '~> 3.1'
   # Library for stubbing and setting expectations on HTTP requests in Ruby
   gem 'webmock'
+end
+
+group :development do
+  gem 'listen', '>= 3.0.5', '< 3.2'
+  # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
+  gem 'spring'
+  gem 'spring-watcher-listen', '~> 2.0.0'
+  # help to kill N+1 queries and unused eager loading
+  gem 'bullet'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
