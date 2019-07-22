@@ -1,7 +1,10 @@
-FROM ruby:2.5.1-slim
+FROM ruby:2.6.3-slim
 
 # Install essential Linux packages
-RUN apt-get update -qq && apt-get install -y build-essential libpq-dev postgresql-client curl
+RUN apt-get update -qq \
+    && mkdir -p /usr/share/man/man1 \
+    && mkdir -p /usr/share/man/man7 \
+    && apt-get install -y build-essential libpq-dev postgresql-client curl
 
 # Environment Variables
 ENV RAILS_ROOT /var/www/boilerplate-app
