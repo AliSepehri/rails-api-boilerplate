@@ -10,9 +10,11 @@ app_dir = File.expand_path('../..', __dir__)
 rails_env = ENV['RAILS_ENV'] || 'production'
 environment rails_env
 
+port = ENV.fetch('EXPOSE_PORT') { 3000 }
+
 # Set up socket location
 # bind "unix://#{app_dir}/sockets/puma.sock"
-bind "tcp://0.0.0.0:#{ENV['EXPOSE_PORT']}"
+bind "tcp://0.0.0.0:#{port}"
 
 # Logging
 stdout_redirect "#{app_dir}/log/puma.stdout.log", "#{app_dir}/log/puma.stderr.log", true
