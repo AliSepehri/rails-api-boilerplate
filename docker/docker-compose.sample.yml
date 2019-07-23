@@ -13,6 +13,14 @@ services:
     ports:
       - 3000:3000
 
+  boilerplate_sidekiq:
+    image: boilerplate-app:latest
+    build: ../
+    container_name: boilerplate-sidekiq
+    command: bundle exec sidekiq
+    environment:
+      REDIS_URL: redis://redis:6379/0
+
   postgres:
     image: postgres:10.5
     container_name: postgres
@@ -21,7 +29,14 @@ services:
     volumes:
       - db-data:/var/lib/postgresql/data
 
+  redis:
+    image: redis:5.0-alpine
+    command: redis-server
+    volumes:
+      - redis-data:/data
+
 volumes:
   app-log:
   app-public:
   db-data:
+  redis-data:
