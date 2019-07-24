@@ -8,7 +8,7 @@ services:
     env_file:
       - docker.env
     volumes:
-      - app-public:/var/www/boilerplate-app/public/uploads:z
+      - app-public:/var/www/boilerplate-app/public:z
       - app-log:/var/www/boilerplate-app/log:z
     ports:
       - 3000:3000
