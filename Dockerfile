@@ -8,6 +8,7 @@ RUN apt-get update -qq \
 
 # Environment Variables
 ENV RAILS_ROOT /var/www/boilerplate-app
+ENV EXPOSE_PORT 9292
 
 # Create application home. App server will need the pids dir so just create everything in one shot
 RUN mkdir -p $RAILS_ROOT/tmp/pids
@@ -30,6 +31,9 @@ RUN bundle install
 # Copy the Rails application into place
 COPY . .
 COPY config/database.sample.yml config/database.yml
+
+EXPOSE $EXPOSE_PORT	
+VOLUME [ "/public" ]
 
 # Health Check
 HEALTHCHECK --interval=30s --timeout=5s \
