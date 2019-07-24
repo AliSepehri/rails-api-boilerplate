@@ -28,5 +28,5 @@ coverage
 /config/application.yml
 
 # Docker
-/docker/docker-compose*.yml
-/docker/docker*.env
+/docker/docker-compose.yml
+/docker/docker.env
